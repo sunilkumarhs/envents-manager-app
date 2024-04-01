@@ -8,6 +8,7 @@ const addUserData = (uMail, uName, uPassword, setSingUp, setErrorMessage) => {
     name: encryptData(uName),
     mail: encryptData(uMail),
     password: uPassword,
+    signedIn: false,
   };
   const addUserInfo = async () => {
     try {

@@ -50,7 +50,6 @@ const LoginPage = () => {
       setErrorMessage("Please enter the required credntials!!");
     }
   };
-
   return (
     <>
       {imageLink ? (

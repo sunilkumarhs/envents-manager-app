@@ -20,11 +20,13 @@ const authenticateUser = (
     if (authuser.length === 0) {
       setErrorMessage("Please enter the proper credentials!!");
     } else {
-      navigate("/browse");
+      authuser[0].signedIn = true;
+      const res = await api.put(`/auth/${authuser[0].id}`, authuser[0]);
+      localStorage.setItem("user", JSON.stringify(res.data));
+      dispatch(addUser(res.data));
+      navigate("/");
       setErrorMessage(null);
-      dispatch(addUser(authuser));
-    }
-    console.log(authuser);
+    } 
   };
   authenticateApp();
 };
