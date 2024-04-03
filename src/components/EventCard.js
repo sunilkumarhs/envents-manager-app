@@ -1,5 +1,6 @@
 import React from "react";
 import { IMG_PATH } from "../utils/constants";
+import { ImLocation2 } from "react-icons/im";
 // import { useNavigate } from "react-router-dom";
 
 const EventCard = ({ eventDetails }) => {
@@ -31,12 +32,15 @@ const EventCard = ({ eventDetails }) => {
     <div className="py-2 pr-4">
       <div className="py-2 lg:w-[200px] lg:h-[18rem] w-[17rem] relative">
         <div className="text-white w-full absolute text-xs lg:px-4 px-5 lg:bottom-5 bottom-6">
-          <p className="font-semibold">{eventDetails?.eventName}</p>
-          <div className="flex justify-between">
-            <p>{eventDetails?.cityName}</p>
+          <p className="font-bold py-1">{eventDetails?.eventName}</p>
+          <div className="flex justify-between ">
+            <div className="flex">
+              <ImLocation2 className="mt-[2px]" />
+              <p>{eventDetails?.cityName}</p>
+            </div>
             <p>{strDate}</p>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between py-1">
             <p>{eventDetails?.weather}</p>
             <p>{distance.toFixed(2)}KM</p>
           </div>

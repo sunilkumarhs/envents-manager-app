@@ -6,6 +6,8 @@ import decryptData from "../utils/dataProtection/decryptData";
 import { BiArrowFromLeft } from "react-icons/bi";
 import RecomendedList from "./RecomendedList";
 import MainDetailsPage from "./MainDetailsPage";
+import UpcomingEventsList from "./UpcomingEventsList";
+// import useGetUpcomingEvents from "../utils/hooks/useGetUpcomingEvents";
 // import encryptData from "../utils/dataProtection/encryptData";
 
 const BrowsePage = () => {
@@ -13,6 +15,7 @@ const BrowsePage = () => {
   const recomendedEvents = useSelector(
     (store) => store?.events?.recomendedData
   );
+
   return (
     <div>
       <NavBar />
@@ -29,11 +32,19 @@ const BrowsePage = () => {
           <div className="relative">
             <MainDetailsPage />
             <div className="lg:py-8 py-10"></div>
-            <h1 className="text-white font-semibold flex pl-10 md:pl-20 xl:pl-32">
+            <h1 className="text-white font-bold flex pl-10 md:pl-20 xl:pl-32">
               Recomended Shows <BiArrowFromLeft className="text-2xl mt-[2px]" />
             </h1>
             <div className=" pl-10 md:pl-20 xl:pl-32">
               <RecomendedList recEventsData={recomendedEvents} />
+            </div>
+            <div className="lg:py-2 py-4"></div>
+            <h1 className="bg-white text-black font-bold flex pl-10 md:pl-20 xl:pl-32">
+              Upcomming Shows <BiArrowFromLeft className="text-2xl mt-[2px]" />
+            </h1>
+            <div className="py-2 bg-white"></div>
+            <div className=" pl-10 md:pl-20 xl:pl-32">
+              <UpcomingEventsList />
             </div>
           </div>
         </div>

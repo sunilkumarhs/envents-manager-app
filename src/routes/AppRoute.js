@@ -5,12 +5,14 @@ import BrowsePage from "../components/BrowsePage";
 import useGetLoggedUser from "../utils/hooks/useGetLoggedUser";
 import useGetEventsDetails from "../utils/hooks/useGetEventsDetails";
 import useGetRecomendedEvents from "../utils/hooks/useGetRecomendedEvents";
+import useGetUpcomingEvents from "../utils/hooks/useGetUpcomingEvents";
 
 const LoginPage = lazy(() => import("../auth/LoginPage"));
 
 const AppRoute = () => {
   useGetEventsDetails();
   useGetRecomendedEvents();
+  useGetUpcomingEvents();
   useGetLoginImg();
   useGetLoggedUser();
   const appRouter = createBrowserRouter([
