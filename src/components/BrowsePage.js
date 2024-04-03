@@ -7,12 +7,8 @@ import { BiArrowFromLeft } from "react-icons/bi";
 import RecomendedList from "./RecomendedList";
 import MainDetailsPage from "./MainDetailsPage";
 import UpcomingEventsList from "./UpcomingEventsList";
-import useGetUpcomingEvents from "../utils/hooks/useGetUpcomingEvents";
-import useGetNestUpEvents from "../utils/hooks/useGetNestUpEvents";
-// import encryptData from "../utils/dataProtection/encryptData";
 
 const BrowsePage = () => {
-  // useGetUpcomingEvents();
   const bgImageLink = useSelector((store) => store?.events?.detailsLink);
   const recomendedEvents = useSelector(
     (store) => store?.events?.recomendedData
@@ -26,7 +22,7 @@ const BrowsePage = () => {
           <div className="absolute h-screen">
             <div className="w-screen h-screen browseBg1 absolute"></div>
             <img
-              src={decryptData(bgImageLink.bannerImage)}
+              src={decryptData(bgImageLink?.bannerImage)}
               alt="bannerImage"
               className="h-screen w-screen object-cover"
             />

@@ -27,6 +27,8 @@ const UpcomingEventsList = () => {
     [loading, hasMore]
   );
 
+  if (error) console.log(error);
+
   return (
     <div>
       {upEventsData ? (
