@@ -12,7 +12,6 @@ const LoginPage = lazy(() => import("../auth/LoginPage"));
 const AppRoute = () => {
   useGetEventsDetails();
   useGetRecomendedEvents();
-  useGetUpcomingEvents();
   useGetLoginImg();
   useGetLoggedUser();
   const appRouter = createBrowserRouter([

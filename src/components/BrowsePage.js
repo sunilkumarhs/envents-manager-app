@@ -7,10 +7,12 @@ import { BiArrowFromLeft } from "react-icons/bi";
 import RecomendedList from "./RecomendedList";
 import MainDetailsPage from "./MainDetailsPage";
 import UpcomingEventsList from "./UpcomingEventsList";
-// import useGetUpcomingEvents from "../utils/hooks/useGetUpcomingEvents";
+import useGetUpcomingEvents from "../utils/hooks/useGetUpcomingEvents";
+import useGetNestUpEvents from "../utils/hooks/useGetNestUpEvents";
 // import encryptData from "../utils/dataProtection/encryptData";
 
 const BrowsePage = () => {
+  // useGetUpcomingEvents();
   const bgImageLink = useSelector((store) => store?.events?.detailsLink);
   const recomendedEvents = useSelector(
     (store) => store?.events?.recomendedData

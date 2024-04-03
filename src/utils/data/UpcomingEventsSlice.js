@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const UpcomingEventsSlice = createSlice({
   name: "upcomingEvents",
   initialState: {
-    upCommingEvents: null,
+    upCommingEvents: [],
   },
   reducers: {
     addUpEvents: (state, action) => {
-      state.upCommingEvents = action.payload;
+      state.upCommingEvents.push(action.payload);
     },
   },
 });

@@ -9,21 +9,20 @@ const useGetUpcomingEvents = () => {
   const upEnventsLink = useSelector(
     (store) => store?.events?.detailsLink?.upcomming
   );
-  const upcomingEvents = useSelector(
-    (store) => store?.upEvents?.upCommingEvents
-  );
-
   const getUpEvents = async () => {
     const link = decryptData(upEnventsLink);
     try {
       const response = await api.get(link);
-      if (response.status === 200) dispatch(addUpEvents(response.data.events));
+      const events = [...response.data.events];
+      if (response.status === 200) {
+        events.map((event) => dispatch(addUpEvents(event)));
+      }
     } catch (error) {
       console.log(error);
     }
   };
   useEffect(() => {
-    !upcomingEvents && upEnventsLink && getUpEvents();
+    upEnventsLink && getUpEvents();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [upEnventsLink]);
 };
