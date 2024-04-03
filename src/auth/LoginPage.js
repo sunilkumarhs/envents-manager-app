@@ -57,13 +57,16 @@ const LoginPage = () => {
           <img
             src={decryptData(imageLink)}
             alt="bg-img"
-            className="h-screen  min-w-full"
+            className="h-screen object-cover min-w-full"
           />
           <div className="absolute top-0 right-0 bottom-0 left-0 signBg1">
             <div className="absolute top-0 right-0 bottom-0 left-0 signBg2">
               <div className="w-full flex justify-between">
                 <div className="px-4 pt-2">
-                  <button className="text-red-600 bg-black p-3 font-serif font-bold border-2 border-red-600">
+                  <button
+                    className="text-red-600 bg-black p-3 font-serif font-bold border-2 border-red-600"
+                    onClick={() => navigate("/")}
+                  >
                     Events LookUp
                   </button>
                 </div>

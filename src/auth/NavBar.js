@@ -21,7 +21,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="w-full xl:pl-10 xl:pr-20 lg:pl-6 lg:pr-12 pl-4 pr-8 py-2 max-md:px-4">
+    <div className="w-full xl:pl-10 xl:pr-20 lg:pl-6 lg:pr-12 pl-4 pr-8 pt-2 max-md:px-4">
       <div className="flex max-md:justify-between">
         <div className="md:w-2/5">
           <h1 className="text-red-500 font-bold md:text-2xl text-xl">
@@ -68,7 +68,7 @@ const NavBar = () => {
           )}
         </div>
       </div>
-      <div className="md:flex md:py-3 pt-1 text-center">
+      <div className="md:flex md:pt-3 md:pb-2 pt-1 text-center">
         <div className="flex">
           <ImLocation2 className="text-slate-400 text-lg -ml-1" />
           <div className="lg:px-2 px-1"></div>
@@ -76,14 +76,28 @@ const NavBar = () => {
           <MdKeyboardArrowRight className="text-slate-400 text-2xl" />
         </div>
         <div className="xl:pl-48 lg:pl-36 md:pl-10 max-md:py-3">
-          <ul className="flex text-slate-400 text-sm max-md:overflow-x-scroll">
-            <li className="px-4">Liveshows</li>
-            <li className="px-4">Streams</li>
-            <li className="px-4">Movies</li>
-            <li className="px-4">Plays</li>
-            <li className="px-4">Events</li>
-            <li className="px-4">Sports</li>
-            <li className="pl-4">Activities</li>
+          <ul className="flex text-slate-400 text-sm max-md:overflow-x-scroll cursor-pointer">
+            <li className="px-4 hover:border-b-2 py-[0.10rem] hover:border-slate-500 transition-all">
+              Liveshows
+            </li>
+            <li className="px-4 hover:border-b-2 py-[0.10rem] hover:border-slate-500 transition-all">
+              Streams
+            </li>
+            <li className="px-4 hover:border-b-2 py-[0.10rem] hover:border-slate-500 transition-all">
+              Movies
+            </li>
+            <li className="px-4 hover:border-b-2 py-[0.10rem] hover:border-slate-500 transition-all">
+              Plays
+            </li>
+            <li className="px-4 hover:border-b-2 py-[0.10rem] hover:border-slate-500 transition-all">
+              Events
+            </li>
+            <li className="px-4 hover:border-b-2 py-[0.10rem] hover:border-slate-500 transition-all">
+              Sports
+            </li>
+            <li className="pl-4 hover:border-b-2 py-[0.10rem] hover:border-slate-500 transition-all">
+              Activities
+            </li>
           </ul>
         </div>
       </div>

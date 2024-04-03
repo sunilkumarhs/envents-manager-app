@@ -5,10 +5,14 @@ import { useDispatch, useSelector } from "react-redux";
 
 const useGetLoginImg = () => {
   const dispatch = useDispatch();
-  const loginImgLink = useSelector((store) => store?.imgLink?.loginImage);
+  const loginImgLink = useSelector((store) => store?.imgLink);
   const getAppData = async () => {
-    const response = await api.get("/images");
-    dispatch(addImg(response.data));
+    try {
+      const response = await api.get("/images");
+      if (response.status === 200) dispatch(addImg(response.data));
+    } catch (error) {
+      console.log(error);
+    }
   };
   useEffect(() => {
     !loginImgLink && getAppData();
